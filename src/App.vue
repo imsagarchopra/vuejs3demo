@@ -1,5 +1,27 @@
 <template>
   <HelloWorld msg="Vue JS 3 Demo"/>
+  <div>{{ greet }}</div>
+  <div v-text="name"></div>
+
+  <div v-html="channel"></div>
+
+  <h1 v-bind:id="headingId">Heading</h1>
+  <button v-bind:disabled="isDisabled">Bind</button>
+
+  <h2 class="underline">Underlined text</h2>
+  <h2 class="underline" v-bind:class="'new'">Combination of static and dynamic class</h2>
+
+  <h2 v-bind:class="isPromoted && 'promoted'">Promoted Movie</h2>
+  <h2 v-bind:class="isSoldOut ? 'soldOut' : 'new'">Sold Out?</h2>
+
+  <h2 v-bind:class="['new', 'promoted']">Newly Promoted Array movie</h2>
+  <h2 v-bind:class="[isPromoted && 'promoted', isSoldOut ? 'soldOut' : 'new']">Array Conditional movie</h2>
+
+  <h2 v-bind:class="{
+    promoted: isPromoted,
+    new: !isSoldOut,
+    soldOut: isSoldOut
+  }">Object Conditional movie</h2>
 </template>
 
 <script>
@@ -9,6 +31,17 @@ export default {
   name: 'App',
   components: {
     HelloWorld
+  },
+  data(){
+    return{
+      greet: "Hello",
+      name: "Shaggy",
+      channel: "<b>Youtube</b>",
+      headingId: "heading",
+      isDisabled: true,
+      isPromoted: true,
+      isSoldOut: true
+    }
   }
 }
 </script>
@@ -21,5 +54,21 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.underline{
+  text-decoration: underline;
+}
+
+.promoted{
+  font-style: italic;
+}
+
+.new{
+  color: green;
+}
+
+.soldOut{
+  color: red;
 }
 </style>
