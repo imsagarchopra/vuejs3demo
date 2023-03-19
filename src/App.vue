@@ -36,6 +36,8 @@
   <h2 v-else-if="num > 0">This is a Positive Number</h2>
   <h2 v-else-if="num < 0">This is a Negative Number</h2>
   <h2 v-else>This is Not a Number</h2>
+
+  <h2 v-show="num === 0">This is not a zero</h2>
 </template>
 
 <script>
