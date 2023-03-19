@@ -31,6 +31,11 @@
   <h2 v-bind:style="headerStyleObject">Style Object</h2>
   <h2 v-bind:style="[baseStyleObject, successStyleObject]">Success Style Array</h2>
   <h2 v-bind:style="[baseStyleObject, dangerStyleObject]">Danger Style Array</h2>
+
+  <h2 v-if="num === 0">This is a zero</h2>
+  <h2 v-else-if="num > 0">This is a Positive Number</h2>
+  <h2 v-else-if="num < 0">This is a Negative Number</h2>
+  <h2 v-else>This is Not a Number</h2>
 </template>
 
 <script>
@@ -71,7 +76,9 @@ export default {
         color: 'darkred',
         backgroundColor: 'red',
         border: '1px solid red'
-      }
+      },
+
+      num: 0
     }
   }
 }
