@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld msg="Vue JS 3 Demo"/>
+  <HelloWorld msg="Vue JS 3 Demo" />
   <div>{{ greet }}</div>
   <div v-text="name"></div>
 
@@ -22,6 +22,15 @@
     new: !isSoldOut,
     soldOut: isSoldOut
   }">Object Conditional movie</h2>
+
+  <h2 v-bind:style="{
+    color: highlightColor,
+    fontSize: headerSize + 'px',
+    padding: '20px'
+  }">Inline Style</h2>
+  <h2 v-bind:style="headerStyleObject">Style Object</h2>
+  <h2 v-bind:style="[baseStyleObject, successStyleObject]">Success Style Array</h2>
+  <h2 v-bind:style="[baseStyleObject, dangerStyleObject]">Danger Style Array</h2>
 </template>
 
 <script>
@@ -32,15 +41,37 @@ export default {
   components: {
     HelloWorld
   },
-  data(){
-    return{
+  data() {
+    return {
       greet: "Hello",
       name: "Shaggy",
       channel: "<b>Youtube</b>",
       headingId: "heading",
       isDisabled: true,
       isPromoted: true,
-      isSoldOut: true
+      isSoldOut: true,
+      highlightColor: 'orange',
+
+      headerSize: 50,
+      headerStyleObject: {
+        color: 'orange',
+        fontSize: '50px',
+        padding: '20px'
+      },
+      baseStyleObject: {
+        fontSize: '50px',
+        padding: '10px'
+      },
+      successStyleObject: {
+        color: 'green',
+        backgroundColor: 'lightgreen',
+        border: '1px solid green'
+      },
+      dangerStyleObject: {
+        color: 'darkred',
+        backgroundColor: 'red',
+        border: '1px solid red'
+      }
     }
   }
 }
@@ -56,19 +87,19 @@ export default {
   margin-top: 60px;
 }
 
-.underline{
+.underline {
   text-decoration: underline;
 }
 
-.promoted{
+.promoted {
   font-style: italic;
 }
 
-.new{
+.new {
   color: green;
 }
 
-.soldOut{
+.soldOut {
   color: red;
 }
 </style>
