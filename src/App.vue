@@ -58,6 +58,13 @@
 
   <h2>Add Method - {{ add(1,2,3) }}</h2>
   <h2>Multiply Method - {{ multiply(baseValue) }}</h2>
+
+  <h2>{{ count }}</h2>
+  <div>
+    <!-- <button v-on:click="count += 1">Increment</button> -->
+    <button v-on:click="increment(1)">Increment</button>
+    <button v-on:click="decrement(1)">Decrement</button>
+  </div>
 </template>
 
 <script>
@@ -127,7 +134,9 @@ export default {
       },
 
       baseMultiplier: 5,
-      baseValue: 2
+      baseValue: 2,
+
+      count: 0
     }
   },
   methods:{
@@ -136,6 +145,12 @@ export default {
     },
     multiply(num){
       return num * this.baseMultiplier;
+    },
+    increment(num){
+       this.count += num;
+    },
+    decrement(num){
+       this.count -= num;
     }
   }
 }
