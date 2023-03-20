@@ -55,6 +55,9 @@
     <h2>{{ name }}</h2>
     <hr/>
   </template>
+
+  <h2>Add Method - {{ add(1,2,3) }}</h2>
+  <h2>Multiply Method - {{ multiply(baseValue) }}</h2>
 </template>
 
 <script>
@@ -121,7 +124,18 @@ export default {
         name: 'Sagar',
         channel: 'ChopCode',
         course: 'Vue'
-      }
+      },
+
+      baseMultiplier: 5,
+      baseValue: 2
+    }
+  },
+  methods:{
+    add(a,b,c){
+      return a+b+c;
+    },
+    multiply(num){
+      return num * this.baseMultiplier;
     }
   }
 }
