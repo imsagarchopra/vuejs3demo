@@ -1,14 +1,17 @@
 <template>
-  <HelloWorld msg="Vue JS 3 Demo" />
+  <!-- <HelloWorld msg="Vue JS 3 Demo" /> -->
+  <vueForm/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+// import HelloWorld from './components/HelloWorld.vue'
+import vueForm from './components/vueForm.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld
+    vueForm
   }
 }
 </script>
