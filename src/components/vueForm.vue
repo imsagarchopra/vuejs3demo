@@ -71,6 +71,11 @@
       </div>
 
       <div>
+        <label for="age">Age</label>
+        <input type="number" id="age" v-model="formValues.age"/>
+      </div>
+
+      <div>
         <button>Submit</button>
       </div>
     </form>
@@ -88,7 +93,8 @@
           jobLocation: [],
           remoteWork: false,
           skillSet: [],
-          yearsOfExperience: ''
+          yearsOfExperience: '',
+          age: null
         }
       }
     },

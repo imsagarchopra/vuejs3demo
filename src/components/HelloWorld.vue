@@ -71,6 +71,9 @@
     <button @click="increment(1,$event)">Increment</button>
     <button @click="decrement(1)">Decrement</button>
   </div>
+
+  <h2>Computed Full Name - {{ fullName }}</h2>
+  <button @click="changeFullName">Change Full Name</button>
 </template>
 
 <script>
@@ -140,7 +143,22 @@ export default {
       baseMultiplier: 5,
       baseValue: 2,
 
-      count: 0
+      count: 0,
+
+      firstName: 'Bruce',
+      lastName: 'Wayne'
+    }
+  },
+  computed:{
+    fullName: {
+      get(){
+        return `${this.firstName} ${this.lastName}`;
+      },
+      set(value){
+        const names = value.split(' ');
+        this.firstName = names[0];
+        this.lastName = names[1];
+      }
     }
   },
   methods:{
@@ -156,6 +174,9 @@ export default {
     },
     decrement(num){
        this.count -= num;
+    },
+    changeFullName(){
+      this.fullName = 'Clark Kent';
     }
   }
 }
