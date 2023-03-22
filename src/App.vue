@@ -1,17 +1,20 @@
 <template>
-  <HelloWorld msg="Vue JS 3 Demo" />
+  <!-- <HelloWorld msg="Vue JS 3 Demo" /> -->
   <!-- <vueForm/> -->
+  <WatcherDemo/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 //import vueForm from './components/vueForm.vue'
+import WatcherDemo from './components/WatcherDemo'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld
     //vueForm
+    WatcherDemo
   }
 }
 </script>
