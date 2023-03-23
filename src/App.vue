@@ -1,20 +1,32 @@
 <template>
-  <!-- <HelloWorld msg="Vue JS 3 Demo" /> -->
+  <HelloWorld msg="Vue JS 3 Demo" />
   <!-- <vueForm/> -->
-  <WatcherDemo/>
+  <!-- <WatcherDemo/> -->
+
+  <h2> App Component Username - {{ name }}</h2>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from './components/HelloWorld.vue'
 //import vueForm from './components/vueForm.vue'
-import WatcherDemo from './components/WatcherDemo'
+//import WatcherDemo from './components/WatcherDemo'
 
 export default {
   name: 'App',
   components: {
-    //HelloWorld
+    HelloWorld
     //vueForm
-    WatcherDemo
+    //WatcherDemo
+  },
+  data(){
+    return{
+      name: 'Batman'
+    }
+  },
+  provide(){
+    return{
+      userName: this.name
+    }
   }
 }
 </script>

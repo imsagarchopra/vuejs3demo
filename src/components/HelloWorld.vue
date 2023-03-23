@@ -74,6 +74,8 @@
 
   <h2>Computed Full Name - {{ fullName }}</h2>
   <button @click="changeFullName">Change Full Name</button>
+
+  <h2> Username -{{  userName }}</h2>
 </template>
 
 <script>
@@ -178,7 +180,8 @@ export default {
     changeFullName(){
       this.fullName = 'Clark Kent';
     }
-  }
+  },
+  inject: ['userName']
 }
 </script>
 
