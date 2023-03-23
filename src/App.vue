@@ -1,31 +1,44 @@
 <template>
-  <HelloWorld msg="Vue JS 3 Demo" />
+  <!-- <HelloWorld msg="Vue JS 3 Demo" /> -->
   <!-- <vueForm/> -->
   <!-- <WatcherDemo/> -->
 
-  <h2> App Component Username - {{ name }}</h2>
+  <!-- <h2> App Component Username - {{ name }}</h2> -->
+
+  <button @click="showPopup=true">Open Popup</button>
+  <!-- <PopUp v-show="showPopup" @close="showPopup = false"/> -->
+  <PopUp v-show="showPopup" @close="closePopup"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+//import HelloWorld from './components/HelloWorld.vue'
 //import vueForm from './components/vueForm.vue'
 //import WatcherDemo from './components/WatcherDemo'
+import PopUp from './components/PopUp.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    //HelloWorld
     //vueForm
     //WatcherDemo
+    PopUp
   },
   data(){
     return{
-      name: 'Batman'
+      name: 'Batman',
+      showPopup: false     
     }
   },
   provide(){
     return{
       userName: this.name
+    }
+  },
+  methods:{
+    closePopup(name){
+      this.showPopup = false;
+      console.log('name', name);
     }
   }
 }
