@@ -5,16 +5,20 @@
 
   <!-- <h2> App Component Username - {{ name }}</h2> -->
 
-  <button @click="showPopup=true">Open Popup</button>
+  <!-- <button @click="showPopup=true">Open Popup</button> -->
   <!-- <PopUp v-show="showPopup" @close="showPopup = false"/> -->
-  <PopUp v-show="showPopup" @close="closePopup"/>
+  <!-- <PopUp v-show="showPopup" @close="closePopup"/> -->
+
+  <CardComponent>Card Content 1</CardComponent>
+  <CardComponent><h2>Card Content 2</h2></CardComponent>
 </template>
 
 <script>
 //import HelloWorld from './components/HelloWorld.vue'
 //import vueForm from './components/vueForm.vue'
 //import WatcherDemo from './components/WatcherDemo'
-import PopUp from './components/PopUp.vue'
+//import PopUp from './components/PopUp.vue'
+import CardComponent from './components/CardComponent.vue';
 
 export default {
   name: 'App',
@@ -22,7 +26,8 @@ export default {
     //HelloWorld
     //vueForm
     //WatcherDemo
-    PopUp
+    //PopUp
+    CardComponent
   },
   data(){
     return{
