@@ -9,7 +9,7 @@
   <!-- <PopUp v-show="showPopup" @close="showPopup = false"/> -->
   <!-- <PopUp v-show="showPopup" @close="closePopup"/> -->
 
-  <CardComponent>Card Content 1</CardComponent>
+  <!-- <CardComponent>Card Content 1</CardComponent>
   <CardComponent><h2>Card Content 2</h2></CardComponent>
 
   <CardComponent> 
@@ -22,7 +22,13 @@
     <template v-slot:footer>
       <h3>Footer</h3>
     </template>
-  </CardComponent>
+  </CardComponent> -->
+
+  <NameList>
+    <template v-slot:default="slotProps">
+      {{ slotProps.firstName }} {{ slotProps.lastName }}
+    </template>
+  </NameList>
 </template>
 
 <script>
@@ -30,7 +36,8 @@
 //import vueForm from './components/vueForm.vue'
 //import WatcherDemo from './components/WatcherDemo'
 //import PopUp from './components/PopUp.vue'
-import CardComponent from './components/CardComponent.vue';
+//import CardComponent from './components/CardComponent.vue';
+import NameList from './components/NameList.vue';
 
 export default {
   name: 'App',
@@ -39,7 +46,8 @@ export default {
     //vueForm
     //WatcherDemo
     //PopUp
-    CardComponent
+    //CardComponent
+    NameList
   },
   data(){
     return{
