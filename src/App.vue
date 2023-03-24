@@ -11,6 +11,18 @@
 
   <CardComponent>Card Content 1</CardComponent>
   <CardComponent><h2>Card Content 2</h2></CardComponent>
+
+  <CardComponent> 
+    <template v-slot:header>
+      <h3>Header</h3>
+    </template>
+    <template v-slot:default>
+      <h3>Default Content</h3>
+    </template>
+    <template v-slot:footer>
+      <h3>Footer</h3>
+    </template>
+  </CardComponent>
 </template>
 
 <script>
