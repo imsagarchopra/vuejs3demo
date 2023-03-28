@@ -45,7 +45,8 @@
   <!-- <keep-alive>
     <component :is="activeTab"/>
   </keep-alive> -->
-  
+
+  <PostList/>
 </template>
 
 <script>
@@ -59,6 +60,7 @@
 // import TabA from './components/TabA.vue';
 // import TabB from './components/TabB.vue';
 // import TabC from './components/TabC.vue';
+import PostList from './components/PostList.vue';
 
 export default {
   name: 'App',
@@ -69,11 +71,13 @@ export default {
     //PopUp
     //CardComponent
     //NameList
-
     // TabA,
     // TabB,
-    // TabC
-  },
+    // TabC,
+
+    PostList
+    
+},
   data(){
     return{
       name: 'Batman',
