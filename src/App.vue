@@ -47,6 +47,7 @@
   </keep-alive> -->
 
   <PostList/>
+  <CreatePost/>
 </template>
 
 <script>
@@ -60,6 +61,7 @@
 // import TabA from './components/TabA.vue';
 // import TabB from './components/TabB.vue';
 // import TabC from './components/TabC.vue';
+import CreatePost from './components/CreatePost.vue';
 import PostList from './components/PostList.vue';
 
 export default {
@@ -75,7 +77,8 @@ export default {
     // TabB,
     // TabC,
 
-    PostList
+    PostList,
+    CreatePost
     
 },
   data(){
