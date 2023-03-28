@@ -46,8 +46,10 @@
     <component :is="activeTab"/>
   </keep-alive> -->
 
-  <PostList/>
-  <CreatePost/>
+  <!-- <PostList/>
+  <CreatePost/> -->
+
+  <TemplateRef/>
 </template>
 
 <script>
@@ -61,8 +63,10 @@
 // import TabA from './components/TabA.vue';
 // import TabB from './components/TabB.vue';
 // import TabC from './components/TabC.vue';
-import CreatePost from './components/CreatePost.vue';
-import PostList from './components/PostList.vue';
+//import CreatePost from './components/CreatePost.vue';
+//import PostList from './components/PostList.vue';
+
+import TemplateRef from './components/TemplateRef.vue';
 
 export default {
   name: 'App',
@@ -77,8 +81,10 @@ export default {
     // TabB,
     // TabC,
 
-    PostList,
-    CreatePost
+    //PostList,
+    //CreatePost
+
+    TemplateRef
     
 },
   data(){
