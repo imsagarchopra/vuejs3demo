@@ -15,6 +15,9 @@
 
     export default {
         namd:'PostList',
+        created(){
+            this.getPosts();
+        },
         data(){
             return{
                 posts:[],
