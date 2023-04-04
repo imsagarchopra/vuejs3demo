@@ -49,7 +49,10 @@
   <!-- <PostList/>
   <CreatePost/> -->
 
-  <TemplateRef/>
+  <!-- <TemplateRef/> -->
+
+  <DataComponent/>
+  
 </template>
 
 <script>
@@ -66,7 +69,8 @@
 //import CreatePost from './components/CreatePost.vue';
 //import PostList from './components/PostList.vue';
 
-import TemplateRef from './components/TemplateRef.vue';
+// import TemplateRef from './components/TemplateRef.vue';
+import DataComponent from './components/DataComponent.vue';
 
 export default {
   name: 'App',
@@ -84,7 +88,9 @@ export default {
     //PostList,
     //CreatePost
 
-    TemplateRef
+    //TemplateRef
+
+    DataComponent
     
 },
   data(){
