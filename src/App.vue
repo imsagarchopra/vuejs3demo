@@ -51,8 +51,9 @@
 
   <!-- <TemplateRef/> -->
 
-  <DataComponent/>
-  
+  <!-- <DataComponent/> -->
+  <MethodsComponent/>
+
 </template>
 
 <script>
@@ -70,7 +71,8 @@
 //import PostList from './components/PostList.vue';
 
 // import TemplateRef from './components/TemplateRef.vue';
-import DataComponent from './components/DataComponent.vue';
+//import DataComponent from './components/DataComponent.vue';
+import MethodsComponent from './components/MethodsComponent.vue'
 
 export default {
   name: 'App',
@@ -90,7 +92,8 @@ export default {
 
     //TemplateRef
 
-    DataComponent
+    //DataComponent
+    MethodsComponent
     
 },
   data(){
