@@ -52,7 +52,9 @@
   <!-- <TemplateRef/> -->
 
   <!-- <DataComponent/> -->
-  <MethodsComponent/>
+  <!-- <MethodsComponent/> -->
+
+  <VModel/>
 
 </template>
 
@@ -72,7 +74,9 @@
 
 // import TemplateRef from './components/TemplateRef.vue';
 //import DataComponent from './components/DataComponent.vue';
-import MethodsComponent from './components/MethodsComponent.vue'
+//import MethodsComponent from './components/MethodsComponent.vue'
+
+import VModel from './components/VModel.vue';
 
 export default {
   name: 'App',
@@ -93,7 +97,9 @@ export default {
     //TemplateRef
 
     //DataComponent
-    MethodsComponent
+    //MethodsComponent
+
+    VModel
     
 },
   data(){
