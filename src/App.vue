@@ -54,7 +54,9 @@
   <!-- <DataComponent/> -->
   <!-- <MethodsComponent/> -->
 
-  <VModel/>
+  <!-- <VModel/> -->
+
+  <ComputedComponent/>
 
 </template>
 
@@ -76,7 +78,9 @@
 //import DataComponent from './components/DataComponent.vue';
 //import MethodsComponent from './components/MethodsComponent.vue'
 
-import VModel from './components/VModel.vue';
+// import VModel from './components/VModel.vue';
+
+import ComputedComponent from './components/ComputedComponent.vue';
 
 export default {
   name: 'App',
@@ -99,7 +103,9 @@ export default {
     //DataComponent
     //MethodsComponent
 
-    VModel
+    //VModel
+
+    ComputedComponent
     
 },
   data(){
