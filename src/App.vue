@@ -56,8 +56,10 @@
 
   <!-- <VModel/> -->
 
-  <ComputedComponent/>
+  <!-- <ComputedComponent/> -->
 
+  <WatcherComponent/>
+  
 </template>
 
 <script>
@@ -80,7 +82,9 @@
 
 // import VModel from './components/VModel.vue';
 
-import ComputedComponent from './components/ComputedComponent.vue';
+//import ComputedComponent from './components/ComputedComponent.vue';
+
+import WatcherComponent from './components/WatcherComponent.vue';
 
 export default {
   name: 'App',
@@ -105,7 +109,9 @@ export default {
 
     //VModel
 
-    ComputedComponent
+    //ComputedComponent
+
+    WatcherComponent
     
 },
   data(){
