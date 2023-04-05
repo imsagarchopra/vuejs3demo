@@ -58,8 +58,9 @@
 
   <!-- <ComputedComponent/> -->
 
-  <WatcherComponent/>
-  
+  <!-- <WatcherComponent/> -->
+
+  <ProvideInject/>
 </template>
 
 <script>
@@ -84,7 +85,8 @@
 
 //import ComputedComponent from './components/ComputedComponent.vue';
 
-import WatcherComponent from './components/WatcherComponent.vue';
+//import WatcherComponent from './components/WatcherComponent.vue';
+import ProvideInject from './components/ProvideInject.vue';
 
 export default {
   name: 'App',
@@ -111,7 +113,9 @@ export default {
 
     //ComputedComponent
 
-    WatcherComponent
+    //WatcherComponent
+
+    ProvideInject
     
 },
   data(){
