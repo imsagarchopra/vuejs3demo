@@ -6,14 +6,44 @@
          <!--Composition API-->
          <input type="text" placeholder="First Name" v-model="firstName"/>
          <input type="text" placeholder="Last Name" v-model="lastName"/>
+
+         <!--Composition API-->
+         <input type="text" placeholder="Reactive First Name" v-model="fName"/>
+         <input type="text" placeholder="Reactive Last Name" v-model="lName"/>
+         <input type="text" placeholder="Reactive Hero Name" v-model="options.heroName"/>
     </div>
 </template>
 
 <script>
-    import {ref, watch} from 'vue'
+    import {ref, watch, reactive, toRefs} from 'vue'
     export default {
         name:'WatcherComponent',
         setup(){
+            const state = reactive({
+                fName:'',
+                lName: '',
+                options:{
+                    heroName:''
+                }
+            })
+
+            // watch(() =>{
+            //     return {...state}
+            // },function(newValue,oldValue){
+            //     console.log('fName Old value ', oldValue.fName);
+            //     console.log('fName New value ', newValue.fName)
+            //     console.log('lName Old value ', oldValue.lName);
+            //     console.log('lName New value ', newValue.lName)
+            // })
+
+            watch(()=>state.options,function(newValue,oldValue){
+                 console.log('Old value ', oldValue);
+                console.log('New value ', newValue)
+               
+             },
+             {
+                deep:true
+             })
             const firstName = ref('')
             const lastName = ref('Wayne')
 
@@ -26,7 +56,8 @@
             })
             return{
                 firstName,
-                lastName
+                lastName,
+                ...toRefs(state)
             }
         },
         data(){
